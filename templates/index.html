@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prédiction</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/animate.css')}}">
+</head>
+<body>
+	<div class="container" style="margin:auto">
+		<div class="row">
+			<div class="cols">
+				<center>
+					<h1>Predire le niveau d'un entrepreneur<h1>
+				 <div >
+					<img src="{{url_for('static', filename='kasoko1.jpg')}}" width=600 height=400/>
+				 </div><br>
+					<form id="contactform" action="{{url_for('predict')}}" method="POST">
+						<div class="col-lg-12">
+						<h3>
+						{{prediction_text_}}
+						</h3>
+							<div class="form-group">
+							<input type="text" name="Gender" id="Gend" class="form-control" required placeholder="Votre genre">
+						</div>
+						<div class="form-group">
+							<input type="text" name="Age" id="gl" class="form-control" required placeholder="Votre age">
+						</div>
+						<div class="form-group">
+							<input type="text" name="Education_Level" id="Level"  class="form-control"required placeholder="Votre niveau d'étude">
+							
+						</div>
+						<div class="form-group">
+							<input type="text" name="Institution_Type" id="Institution" class="form-control" required placeholder="Votre Institution">
+						</div>
+						<div class="form-group">
+							<input type="text" name="IT_Student" id="Student" class="form-control" required placeholder="Votre technicien">
+						</div>
+						<div class="form-group">
+							<input type="text" name="Location" id="Loca" class="form-control" required placeholder="Votre adresse">
+						</div>
+						<div class="form-group">
+							<input type="text" name="Load_shedding" id="Load" class="form-control" required placeholder="Niveau de vos pertes">
+						</div>
+						<div class="form-group">
+							<input type="text" name="Financial_Condition" id="Financial" class="form-control" required placeholder="Conditions de votre finance">
+						</div>
+						<div class="form-group">
+							<input type="text" name="Internet_Type" id="Internet" class="form-control" required placeholder="Type de votre Internet">
+						</div>
+						<div class="form-group">
+							<input type="text" name="Network_Type" id="Network" class="form-control" required placeholder="Type de votre réseau">
+						</div>
+						<div class="form-group">
+							<input type="text" name="Class_Duration" id="Class" class="form-control" required placeholder="Durée de votre classe">
+						</div>
+						<div class="form-group">
+							<input type="text" name="Self_Lms" id="Self" class="form-control" required placeholder="Ajout de vos interêts ">
+						</div>
+						<div class="form-group">
+							<input type="text" name="Device" id="Dev"  class="form-control" required placeholder="Votre matériel">
+							
+						</div>
+						<!--<input type="submit" value="Predire maintenant"> -->
+						
+						</div>
+						<button class="btn btn-info">Prédiction</button>
+						
+					</form>
+					
+				</center>
+				
+			
+			</div>
+		</div>
+	
+	</div>
+	
+</body>
+</html>
